@@ -177,6 +177,8 @@ hands.forEach((hand) => {
 
   if (p1HandStrength > p2HandStrength) return p1Score++;
   if (p2HandStrength > p1HandStrength) return p2Score++;
+  
+  // Determines which players' cards to use for tie-breaks based on the hands they have
 
   if ([1, 5, 6, 9, 10].includes(p1HandStrength)) {
     for (let i = p1Ranks.length; i > 0; i--) {
