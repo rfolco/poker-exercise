@@ -46,6 +46,7 @@ const {
 
 // Assigns a numerical score to a hand based on cards combination.
 // Hands are broken down into ranks and suits, and ranks are put is ascending order.
+// Having players' hands ranks ordered and being able to access them by array indexes makes it easier to define kickers (tie-breaks) 
 
 function handStrength(ranks, suits) {
   if (isRoyalFlush(ranks, suits)) {
