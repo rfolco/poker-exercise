@@ -172,8 +172,6 @@ hands.forEach((hand) => {
     .match(/[2-9]|[TJQKA]/g)
     .sort(orderByRank);
 
-  // console.log(p1Suits, p2Suits);
-
   const p1HandStrength = handStrength(p1Ranks, p1Suits);
   const p2HandStrength = handStrength(p2Ranks, p2Suits);
 
@@ -254,20 +252,3 @@ hands.forEach((hand) => {
 
 console.log(`Player 1: ${p1Score}
 Player 2: ${p2Score}`);
-
-// console.log(getSuits('3D 6D 7D TD QD'));
-// console.log(getRanks('3D 6D 7D TD QD'));
-// console.log(areAllSameSuit(getSuits('3C 6C 7C TC QC')));
-// console.log(
-//   isRoyalFlush(getRanks('AD JD KD TD QD'), getSuits('AD JD KD TD QD'))
-// );
-
-// console.log(getRanks('4H JS 3C TC 8D').sort(orderByRank));
-
-// console.log(isStraight('TD 7C AS KS JC'));
-// console.log(
-//   handStrength(
-//     '2S 6S 5S 3S 4S'.match(/[2-9]|[TJQKA]/g).sort(orderByRank),
-//     '2S 6S 5S 3S 4S'.match(/[CDHS]/g)
-//   )
-// );
