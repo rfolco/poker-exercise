@@ -191,6 +191,9 @@ hands.forEach((hand) => {
   if ([4, 7, 8].includes(p1HandStrength)) {
     return p1Ranks[2] > p2Ranks[2] ? p1Score++ : p2Score++;
   }
+  
+  // Tie-break for two pairs
+  // If both players' two pairs are the same, their remaining cards are compared 
 
   if (p1HandStrength === 3) {
     const p1Highest = p1Ranks[1] > p1Ranks[3] ? p1Ranks[1] : p1Ranks[3];
@@ -214,6 +217,10 @@ hands.forEach((hand) => {
 
     return p1Highest > p2Highest ? p1Score++ : p2Score++;
   }
+  
+  // Tie-break for pair
+  // If players have the same pair, their highest rank remaining cards are compared
+  // If the remaining cards are the same, their second highest rank card is compared and so on
 
   if (p1HandStrength === 2) {
     let p1Pair, p2Pair;
